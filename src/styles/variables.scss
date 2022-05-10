@@ -1,0 +1,167 @@
+// global
+$color333: #333333;
+$color666: #666666;
+$color999: #999999;
+$colordb: #DBDBDB;
+$main: #ffae0a;
+$selected: #faa20a;
+$normal: #ffae0a;
+$hover: #ffb914;
+$primary: #fcb953;
+// sidebar
+$menuText: #fff;
+$menuActiveText:#F8A908;
+$subMenuActiveText:#FFFFFF; //https://github.com/ElemeFE/element/issues/12951
+
+$menuBg:#31353d;
+$menuHover:#31353d;
+
+$subMenuBg:#F7F8FC;
+$subMenuHover:#f7f8fc;
+
+$sideBarWidth: 210px;
+
+$navbarHeight: 60px; // 顶部的高度，展出的菜单距离顶部的高度
+$block_gray: #292722;
+// patientLayout sidebar
+$patientMenuBg:#fff;
+$patientMenuText: #000;
+$patientMenuActiveText:#F8A908;
+
+// 新版主题色
+$themeColor:#ffd119;
+$borderThemeColor:#ffb300;
+
+
+$i:0;
+
+@while($i <=50) {
+    .ml-#{$i}-px {
+        margin-left: $i + px;
+    }
+
+    .mr-#{$i}-px {
+        margin-right: $i + px;
+    }
+
+    .mt-#{$i}-px {
+        margin-top: $i + px;
+    }
+
+    .mb-#{$i}-px {
+        margin-bottom: $i + px;
+    }
+
+    .pl-#{$i}-px {
+        padding-left: $i + px;
+    }
+
+    .pr-#{$i}-px {
+        padding-right: $i + px;
+    }
+
+    .pt-#{$i}-px {
+        padding-top: $i + px;
+    }
+
+    .pb-#{$i}-px {
+        padding-bottom: $i + px;
+    }
+
+    $i:$i+1;
+}
+
+$size:12;
+
+@while($size <=24) {
+    .text-000-#{$size} {
+        color: #000;
+        font-size: $size + px;
+    }
+
+    .text-333-#{$size} {
+        color: #333;
+        font-size: $size + px;
+    }
+
+    .text-666-#{$size} {
+        color: #666;
+        font-size: $size + px;
+    }
+
+    .text-999-#{$size} {
+        color: #999;
+        font-size: $size + px;
+    }
+
+    $size: $size+2;
+}
+
+//舒雅淇主题色
+// 舒雅淇蓝色主题 
+$theme-blue-b1:#1F8DFF;
+$theme-blue-b2:#3397FF;
+$theme-blue-b3:#57B1FF;
+$theme-blue-b4:#78C7FF;
+$theme-blue-b5:#B2E3FF;
+$theme-blue-b6:#E0F5FF;
+
+// 舒雅淇橙色主题 
+$theme-orange-o1:#FFA500;
+$theme-orange-o2:#FFAE1A;
+$theme-orange-o3:#FFC23F;
+$theme-orange-o4:#FFD466;
+$theme-orange-o5:#FFE699;
+$theme-orange-o6:#FFF4CC;
+
+// 舒雅淇红色主题 
+$theme-red-r1:#FF4830;
+$theme-red-r2:#FF614D;
+$theme-red-r3:#FF8669;
+$theme-red-r4:#FFAB8A;
+$theme-red-r5:#FFDFCF;
+$theme-red-r6:#FFEEE0;
+
+// 舒雅淇绿色主题 
+$theme-green-g1:#55BA2A;
+$theme-green-g2:#5DCC2E;
+$theme-green-g3:#86D559;
+$theme-green-g4:#ACEA7D;
+$theme-green-g5:#D1F8AB;
+$theme-green-g6:#EAFBD4;
+
+// 舒雅淇紫色主题 
+$theme-purple-p1:#748AFC;
+$theme-purple-p2:#8397FC;
+$theme-purple-p3:#96A9FD;
+$theme-purple-p4:#ABBBFE;
+$theme-purple-p5:#C7D3FE;
+$theme-purple-p6:#E3E9FE;
+
+$theme-grey1:#18191b;
+$theme-grey2:#47494d;
+$theme-grey3:#6c6f73;
+$theme-grey4:#9fa3a6;
+$theme-grey5:#CDCFD1;
+$theme-grey6:#DEE1E3;
+$theme-grey7:#E6E8EB;
+$theme-grey8:#F2F5F7;
+$theme-grey9:#F7F8FA;
+$theme-grey10:#FFFFFF;
+$theme-grey11:#17171A;
+
+
+
+// the :export directive is the magic sauce for webpack
+
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+    menuText: $menuText;
+    menuActiveText: $menuActiveText;
+    subMenuActiveText: $subMenuActiveText;
+    menuBg: $menuBg;
+    menuHover: $menuHover;
+    subMenuBg: $subMenuBg;
+    subMenuHover: $subMenuHover;
+    sideBarWidth: $sideBarWidth;
+}
