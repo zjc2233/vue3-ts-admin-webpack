@@ -2,6 +2,13 @@
 
 module.exports = {
     chainWebpack(config) {
+        config
+            .plugin('html')
+            .tap(args => {
+                args[0].title= '这里是标题'
+                return args
+            })
+        // scss某些文件都引入
         const oneOfsMap = config.module.rule('scss').oneOfs.store;
         oneOfsMap.forEach(item => {
             item

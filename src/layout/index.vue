@@ -4,11 +4,13 @@
             <component :is="nav" />
         </el-aside>
         <el-container class="bg-zinc-100">
-            <el-header class="bg-sky-200">Header</el-header>
-            <el-main class="m-4 bg-light-50 rounded-xl">
-                <transition name="fade" mode="out-in" appear>
+            <el-header class="bg-light-50">
+                <component :is="header" />
+            </el-header>
+            <el-main class="m-3 max-h-[calc(100vh-60px-1.5rem)] overflow-y-scroll" style="padding: 0;">
+                <!-- <transition name="fade" mode="out-in" appear> -->
                     <router-view></router-view>
-                </transition>
+                <!-- </transition> -->
             </el-main>
         </el-container>
     </el-container>
@@ -17,6 +19,7 @@
 <script lang='ts' setup>
 import { Transition } from 'Vue'
 import nav from "@/layout/nav.vue";
+import header from "@/layout/header.vue";
 </script>
 
 <style lang='scss'>
